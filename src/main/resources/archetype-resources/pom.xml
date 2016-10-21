@@ -12,27 +12,25 @@
         <version>2-SNAPSHOT</version>
     </parent>
 
-<url>https://github.com/akalsan/archetype-test.git</url>
+<url>https://github.com/eurekaclinical/${artifactId}.git</url>
 
 <scm>
-    <connection>scm:git:https://github.com/akalsan/archetype-test.git</connection>
-    <developerConnection>scm:git:https://github.com/akalsan/archetype-test.git</developerConnection>
-    <url>https://github.com/akalsan/archetype-test.git</url>
+    <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-template.git</connection>
+    <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-template.git</developerConnection>
+    <url>https://github.com/eurekaclinical/eurekaclinical-webapp-template.git</url>
     <tag>HEAD</tag>
 </scm>
 
 <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/akalsan/archetype-test/issues</url>
+    <url>https://github.com/eurekaclinical/eurekaclinical-webapp-template/issues</url>
 </issueManagement>
 
 <properties>
     <module-name>eurekaclinical-template</module-name>
     <jstl-version>1.2</jstl-version>
     <jsp-api-version>2.0</jsp-api-version>
-    <guice-version>3.0</guice-version>
-    <eurekaclinical-common-version>1.0-Alpha-16</eurekaclinical-common-version>
-    <eurekaclinical-standard-apis-version>1.0-Alpha-7</eurekaclinical-standard-apis-version>
+    <eurekaclinical-common-version>1.1-SNAPSHOT</eurekaclinical-common-version>
 </properties>
 
 <build>
@@ -152,21 +150,26 @@
             </executions>
         </plugin>
         <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>properties-maven-plugin</artifactId>
-            <version>1.0.0</version>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
             <executions>
                 <execution>
+                    <id>copy-resources</id>
+                    <phase>process-resources</phase>
                     <goals>
-                        <goal>set-system-properties</goal>
+                        <goal>copy-resources</goal>
                     </goals>
                     <configuration>
-                        <properties>
-                            <property>
-                                <name>module-name</name>
-                                <value>${module-name}</value>
-                            </property>
-                        </properties>
+                        <outputDirectory>${basedir}/target/classes</outputDirectory>
+                        <resources>
+                            <resource>
+                                <directory>src/main/resources</directory>
+                                <filtering>true</filtering>
+                                <includes>
+                                    <include>main.properties</include>
+                                </includes>
+                            </resource>
+                        </resources>
                     </configuration>
                 </execution>
             </executions>
@@ -180,13 +183,13 @@
         <version>${eurekaclinical-common-version}</version>
     </dependency>
     <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+    </dependency>
+    <dependency>
         <groupId>jstl</groupId>
         <artifactId>jstl</artifactId>
         <version>${jstl-version}</version>
-    </dependency>
-    <dependency>
-        <groupId>javax.servlet</groupId>
-        <artifactId>javax.servlet-api</artifactId>
     </dependency>
     <dependency>
         <groupId>javax.servlet</groupId>

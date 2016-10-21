@@ -1,9 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-/*
+
+package ${package}.rhsit.taglib.templates;
+
+/*-
  * ${symbol_pound}%L
- * Eureka! Clinical User Webapp
+ * ${artifactId}
  * %%
  * Copyright (C) 2016 Emory University
  * %%
@@ -20,7 +23,6 @@
  * limitations under the License.
  * ${symbol_pound}L%
  */
-package ${package}.rhsit.taglib.templates;
 
 /**
  * 

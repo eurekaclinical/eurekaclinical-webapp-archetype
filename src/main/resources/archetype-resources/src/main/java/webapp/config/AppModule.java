@@ -30,7 +30,6 @@ import ${package}.webapp.props.WebappProperties;
 import com.google.inject.AbstractModule;
 import ${package}.common.comm.clients.RouterTable;
 import ${package}.standardapis.props.CasEurekaClinicalProperties;
-import ${package}.standardapis.props.EurekaClinicalProperties;
 
 /**
  * Created by akalsan on 9/15/16.

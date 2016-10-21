@@ -202,9 +202,9 @@
     <fileSet encoding="UTF-8">
       <directory></directory>
       <includes>
+        <include>.gitignore</include>
         <include>eurekaclinical-webapp-template.iml</include>
         <include>LICENSE</include>
-        <include>NOTICE</include>
       </includes>
     </fileSet>
   </fileSets>

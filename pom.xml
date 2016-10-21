@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.eurekaclinical</groupId>
-  <artifactId>eurekaclinical-webapp-archetype1</artifactId>
+  <artifactId>eurekaclinical-webapp-archetype</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>eurekaclinical-webapp-archetype1</name>
+  <name>eurekaclinical-webapp-archetype</name>
 
   <build>
     <extensions>
@@ -28,9 +28,9 @@
     </pluginManagement>
   </build>
 
-  <description>Parent pom.xml for all Eureka! Clinical projects with standard dependencies</description>
+  <description>Archetype to create eurekaclinical webapp projects</description>
 
-  <url>https://github.com/akalsan/archetype-test.git</url>
+  <url>https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</url>
 
   <developers>
     <developer>
@@ -80,9 +80,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:https://github.com/akalsan/archetype-test.git</connection>
-    <developerConnection>scm:git:https://github.com/akalsan/archetype-test.git</developerConnection>
-    <url>https://github.com/akalsan/archetype-test.git</url>
+    <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</connection>
+    <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</developerConnection>
+    <url>https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</url>
   </scm>
 
   <distributionManagement>

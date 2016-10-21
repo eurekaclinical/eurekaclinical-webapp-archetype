@@ -31,6 +31,7 @@ import ${package}.common.config.InjectorSupport;
 import ${package}.webapp.props.WebappProperties;
 
 import javax.servlet.ServletContextEvent;
+import java.util.ResourceBundle;
 
 /**
  * Created by akalsan on 9/20/16.
@@ -39,7 +40,8 @@ import javax.servlet.ServletContextEvent;
  */
 public class ContextListener extends GuiceServletContextListener{
 	private InjectorSupport injectorSupport;
-	WebappProperties properties = new WebappProperties(System.getProperty("module-name"));
+	private static final ResourceBundle projectNameProperty=ResourceBundle.getBundle("main");
+	WebappProperties properties = new WebappProperties(projectNameProperty.getString("module-name"));
 
 	@Override
 	public void contextInitialized(ServletContextEvent servletContextEvent) {
