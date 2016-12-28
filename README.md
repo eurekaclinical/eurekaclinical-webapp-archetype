@@ -19,7 +19,8 @@ Change the module-name property in the pom.xml to the name of the module you are
 for the module are looked up based on this property in WebappProperties class. 
 
 This project can be tested before you build on it using embedded tomcat. change the application.properties values accordingly. Also update
-service-artifact-id property in the pom.xml.
+service-artifact-id & service-artifact-version property in the pom.xml. open https://localhost:8443/webapp-project-name/protected/view
+link on your browser to test.
 
 
 
