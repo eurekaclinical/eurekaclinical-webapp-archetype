@@ -208,11 +208,11 @@
         <profile>
             <id>tomcat</id>
             <properties>
-                <cas-mock-version>1.1-SNAPSHOT</cas-mock-version>
+                <cas-mock-version>1.0</cas-mock-version>
                 <tomcat.httpsPort>8443</tomcat.httpsPort>
                 <tomcat.port>8080</tomcat.port>
                 <service-artifact-id>eurekaclinical-service-template</service-artifact-id>
-                <service-artifact-version>1.0-SNAPSHOT</service-artifact-version>
+                <service-artifact-version>1.0</service-artifact-version>
             </properties>
             <build>
                 <plugins>
