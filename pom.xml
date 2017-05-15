@@ -4,10 +4,9 @@
 
   <groupId>org.eurekaclinical</groupId>
   <artifactId>eurekaclinical-webapp-archetype</artifactId>
+  <name>Eureka! Clinical Webapp Archetype</name>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
-
-  <name>eurekaclinical-webapp-archetype</name>
 
   <build>
     <extensions>
