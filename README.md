@@ -8,7 +8,7 @@ No final releases yet
 
 ## What does it do?
 This project is an maven archetype that helps you create a base eurekaclinical webapp project that you can build on.
-A working webapp project created based on this archetype takes care of jersey/guice configurations and inherits basic API's from eurekaclinical common that every eurekaclinical webapp project will need to have. A sample.jsp and a corresponding ViewSampleServlet.java is  included as a sample page to demonstrate the workflow, jersey client/server communication and for testing purposes. 
+A working webapp project created based on this archetype takes care of Jersey/Guice configurations and inherits basic API's from eurekaclinical common that every eurekaclinical webapp project will need to have. A sample.jsp and a corresponding ViewSampleServlet.java are included for demonstrating the workflow and Jersey client/server communication, and for testing purposes. 
 
 The project can be created as follows:
 
