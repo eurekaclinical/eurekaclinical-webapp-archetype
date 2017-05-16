@@ -10,6 +10,11 @@ No final releases yet
 This project is an maven archetype that helps you create a base eurekaclinical webapp project that you can build on.
 A working webapp project created based on this archetype takes care of Jersey/Guice configurations and inherits basic API's from eurekaclinical common that every eurekaclinical webapp project will need to have. A sample.jsp and a corresponding ViewSampleServlet.java are included for demonstrating the workflow and Jersey client/server communication, and for testing purposes. 
 
+## Requirements
+* [Oracle Java JDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html)
+* [Maven 3.2.5 or greater](https://maven.apache.org)
+
+## How to use it
 The project can be created as follows:
 
 1) Run the following command, after changing the -DartifactId name to the name of your new project and the -DarchetypeVersion to the version of the archetype that you want to use.
