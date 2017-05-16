@@ -1,15 +1,15 @@
 # Eureka! Clinical Webapp Archetype
 Atlanta Clinical and Translational Science Institute (ACTSI), Emory University, Atlanta GA
 
+## What does it do?
+This project is an maven archetype that helps you create a base eurekaclinical webapp project that you can build on.
+A working webapp project created based on this archetype takes care of Jersey/Guice configurations and inherits basic API's from eurekaclinical common that every eurekaclinical webapp project will need to have. A sample.jsp and a corresponding ViewSampleServlet.java are included for demonstrating the workflow and Jersey client/server communication, and for testing purposes. 
+
 ## Version 1.0 development series
 Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype)
 
 ## Version history
 No final releases yet
-
-## What does it do?
-This project is an maven archetype that helps you create a base eurekaclinical webapp project that you can build on.
-A working webapp project created based on this archetype takes care of Jersey/Guice configurations and inherits basic API's from eurekaclinical common that every eurekaclinical webapp project will need to have. A sample.jsp and a corresponding ViewSampleServlet.java are included for demonstrating the workflow and Jersey client/server communication, and for testing purposes. 
 
 ## Requirements
 * [Oracle Java JDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html)
