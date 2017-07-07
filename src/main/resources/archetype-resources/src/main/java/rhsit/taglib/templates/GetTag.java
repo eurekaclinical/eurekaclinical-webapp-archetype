@@ -1,28 +1,4 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
-
-package ${package}.rhsit.taglib.templates;
-
-/*-
- * ${symbol_pound}%L
- * ${artifactId}
- * %%
- * Copyright (C) 2016 Emory University
- * %%
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *      http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ${symbol_pound}L%
- */
+package rhsit.taglib.templates;
 
 import java.util.Hashtable;
 import java.util.Stack;
@@ -37,43 +13,46 @@ import javax.servlet.jsp.tagext.TagSupport;
  *
  */
 public class GetTag extends TagSupport {
-	private String name = null;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String name = null;
 
-	public int doStartTag() throws JspException {
-		Stack stack = (Stack) pageContext.getAttribute("template-stack",
-				PageContext.REQUEST_SCOPE);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-		if (stack == null)
-			throw new JspException("GetTag.doStartTag(): " + "NO STACK");
+    public int doStartTag() throws JspException {
+        Stack stack = (Stack) pageContext.getAttribute("template-stack",
+                PageContext.REQUEST_SCOPE);
 
-		Hashtable params = (Hashtable) stack.peek();
+        if (stack == null) {
+            throw new JspException("GetTag.doStartTag(): " + "NO STACK");
+        }
 
-		if (params == null)
-			throw new JspException("GetTag.doStartTag(): " + "NO HASHTABLE");
+        Hashtable params = (Hashtable) stack.peek();
 
-		PageParameter param = (PageParameter) params.get(name);
+        if (params == null) {
+            throw new JspException("GetTag.doStartTag(): " + "NO HASHTABLE");
+        }
 
-		if (param != null) {
-			String content = param.getContent();
-			if (param.isDirect()) {
-				try {
-					pageContext.getOut().print(content);
-				} catch (java.io.IOException ex) {
-					throw new JspException(ex.getMessage());
-				}
-			} else {
-				try {
-					pageContext.getOut().flush();
-					pageContext.include(content);
-				} catch (Exception ex) {
-					throw new JspException(ex.getMessage());
-				}
-			}
-		}
-		return SKIP_BODY;
-	}
+        PageParameter param = (PageParameter) params.get(name);
+
+        if (param != null) {
+            String content = param.getContent();
+            if (param.isDirect()) {
+                try {
+                    pageContext.getOut().print(content);
+                } catch (java.io.IOException ex) {
+                    throw new JspException(ex.getMessage());
+                }
+            } else {
+                try {
+                    pageContext.getOut().flush();
+                    pageContext.include(content);
+                } catch (Exception ex) {
+                    throw new JspException(ex.getMessage());
+                }
+            }
+        }
+        return SKIP_BODY;
+    }
 }

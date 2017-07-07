@@ -1,211 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="eurekaclinical-webapp-template"
-    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <fileSets>
-    <fileSet filtered="true" packaged="true" encoding="UTF-8">
-      <directory>src/main/java</directory>
-      <includes>
-        <include>**/*.java</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>src/main/resources</directory>
-      <includes>
-        <include>**/*.xml</include>
-        <include>**/*.properties</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>src/main/webapp</directory>
-      <includes>
-        <include>**/*.txt</include>
-        <include>**/*.xml</include>
-        <include>**/*.jsp</include>
-        <include>**/*.html</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>src/main/resources</directory>
-      <includes>
-        <include>**/*.keystore</include>
-        <include>**/*.truststore</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>src/main/webapp</directory>
-      <includes>
-        <include>**/*.</include>
-        <include>**/*.css</include>
-        <include>**/*.csr</include>
-        <include>**/*.tmpl</include>
-        <include>**/*.APACHE2</include>
-        <include>**/*.conf</include>
-        <include>**/*.dockerignore</include>
-        <include>**/*.eot</include>
-        <include>**/*.jscsrc</include>
-        <include>**/*.patch</include>
-        <include>**/*.BSD</include>
-        <include>**/*.opts</include>
-        <include>**/*.bat</include>
-        <include>**/*.lock</include>
-        <include>**/*.editorconfig</include>
-        <include>**/*.baz</include>
-        <include>**/*.DOCS</include>
-        <include>**/*.ext3</include>
-        <include>**/*.ext2</include>
-        <include>**/*.flow</include>
-        <include>**/*.watchr</include>
-        <include>**/*.ext1</include>
-        <include>**/*.otf</include>
-        <include>**/*.bowerrc</include>
-        <include>**/*.std</include>
-        <include>**/*.tern-port</include>
-        <include>**/*.in</include>
-        <include>**/*.old</include>
-        <include>**/*.png</include>
-        <include>**/*.eslintrc</include>
-        <include>**/*.0</include>
-        <include>**/*.1</include>
-        <include>**/*.node</include>
-        <include>**/*.gitkeep</include>
-        <include>**/*.jshint</include>
-        <include>**/*.MIT</include>
-        <include>**/*.cmd</include>
-        <include>**/*.eslintignore</include>
-        <include>**/*.template</include>
-        <include>**/*.pfx</include>
-        <include>**/*.tern-project</include>
-        <include>**/*.jsm</include>
-        <include>**/*.json5</include>
-        <include>**/*.js</include>
-        <include>**/*.skip</include>
-        <include>**/*.jsx</include>
-        <include>**/*.TXT</include>
-        <include>**/*.targ</include>
-        <include>**/*.sh</include>
-        <include>**/*.markdown</include>
-        <include>**/*.jpeg</include>
-        <include>**/*.nuspec</include>
-        <include>**/*.woff2</include>
-        <include>**/*.map</include>
-        <include>**/*.key</include>
-        <include>**/*.cc</include>
-        <include>**/*.c</include>
-        <include>**/*.qrc</include>
-        <include>**/*.svg</include>
-        <include>**/*.cfg</include>
-        <include>**/*.gitignore</include>
-        <include>**/*.csslintrc</include>
-        <include>**/*.tgz</include>
-        <include>**/*.h</include>
-        <include>**/*.words</include>
-        <include>**/*.gzip</include>
-        <include>**/*.deps</include>
-        <include>**/*.gnu</include>
-        <include>**/*.todo</include>
-        <include>**/*.jshintignore</include>
-        <include>**/*.gradle</include>
-        <include>**/*.tpl</include>
-        <include>**/*.orig</include>
-        <include>**/*.3ctype</include>
-        <include>**/*.ts</include>
-        <include>**/*.npmignore</include>
-        <include>**/*.scss</include>
-        <include>**/*.ls</include>
-        <include>**/*.ps1</include>
-        <include>**/*.ico</include>
-        <include>**/*.rej</include>
-        <include>**/*.md</include>
-        <include>**/*.bnf</include>
-        <include>**/*.jshintrc</include>
-        <include>**/*.re2js</include>
-        <include>**/*.LICENSE</include>
-        <include>**/*.mk</include>
-        <include>**/*.info</include>
-        <include>**/*.yaml</include>
-        <include>**/*.tap</include>
-        <include>**/*.cardinalrc</include>
-        <include>**/*.tar</include>
-        <include>**/*.test</include>
-        <include>**/*.babelrc</include>
-        <include>**/*.el</include>
-        <include>**/*.less</include>
-        <include>**/*.woff</include>
-        <include>**/*.idl</include>
-        <include>**/*.keep</include>
-        <include>**/*.hbs</include>
-        <include>**/*.name</include>
-        <include>**/*.gitmodules</include>
-        <include>**/*.gyp</include>
-        <include>**/*.gif</include>
-        <include>**/*.Makefile</include>
-        <include>**/*.jade</include>
-        <include>**/*.iml</include>
-        <include>**/*.gitattributes</include>
-        <include>**/*.jamignore</include>
-        <include>**/*.tsx</include>
-        <include>**/*.json</include>
-        <include>**/*.yml</include>
-        <include>**/*.ignore</include>
-        <include>**/*.jpg</include>
-        <include>**/*.types</include>
-        <include>**/*.crt</include>
-        <include>**/*.ttf</include>
-        <include>**/*.tld</include>
-        <include>**/*.gz</include>
-        <include>**/*.coffee</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/libraries</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>etc</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/scopes</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.idea/copyright</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>etc</directory>
-      <includes>
-        <include>**/*.template</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>.idea</directory>
-      <includes>
-        <include>**/*.name</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.gitignore</include>
-        <include>eurekaclinical-webapp-template.iml</include>
-        <include>LICENSE</include>
-      </includes>
-    </fileSet>
-  </fileSets>
+                      xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <requiredProperties>
+        <requiredProperty key="propertyNamespace"/>
+        <requiredProperty key="shortNamespace"/>
+        <requiredProperty key="inceptionYear"/>
+        <requiredProperty key="serviceArtifactId"/>
+    </requiredProperties>
+    <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.xml</include>
+                <include>**/*.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/webapp</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.keystore</include>
+                <include>**/*.truststore</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>etc</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>etc</directory>
+            <includes>
+                <include>**/*.template</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>LICENSE</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+    </fileSets>
 </archetype-descriptor>
