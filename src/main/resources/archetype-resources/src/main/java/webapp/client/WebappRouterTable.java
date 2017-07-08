@@ -14,7 +14,7 @@ public class WebappRouterTable implements RouterTable {
     private final Client client;
 
     @Inject
-    public ServiceClientRouterTable(Client inClient) {
+    public WebappRouterTable(Client inClient) {
         this.client = inClient;
     }
 

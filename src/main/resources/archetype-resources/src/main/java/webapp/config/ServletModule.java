@@ -6,7 +6,6 @@ import org.eurekaclinical.common.servlet.DestroySessionServlet;
 import org.eurekaclinical.common.servlet.PostMessageLoginServlet;
 import org.eurekaclinical.common.servlet.ProxyServlet;
 import ${package}.webapp.props.WebappProperties;
-import ${package}.webapp.servlet.ViewSampleServlet;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +24,6 @@ public class ServletModule extends AbstractServletModule {
 
     @Override
     protected void setupServlets() {
-        serve("/protected/view").with(ViewSampleServlet.class);
         serve("/protected/get-session").with(PostMessageLoginServlet.class);
         serve("/proxy-resource/*").with(ProxyServlet.class);
         serve("/destroy-session").with(DestroySessionServlet.class);

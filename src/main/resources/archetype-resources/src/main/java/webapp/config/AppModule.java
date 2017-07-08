@@ -1,7 +1,8 @@
 package ${package}.webapp.config;
 
-import ${package}.client.WebappRouterTable;
+import ${package}.webapp.client.WebappRouterTable;
 import ${package}.webapp.props.WebappProperties;
+import ${package}.client.Client;
 import com.google.inject.AbstractModule;
 import org.eurekaclinical.common.comm.clients.RouterTable;
 import org.eurekaclinical.standardapis.props.CasEurekaClinicalProperties;
@@ -14,9 +15,9 @@ public class AppModule extends AbstractModule {
     private final WebappProperties properties;
     private final Client client;
 
-    public AppModule(WebappProperties inProperties) {
+    public AppModule(WebappProperties inProperties, Client inClient) {
         this.properties = inProperties;
-        this.client = new Client(this.properties.getServiceUrl());
+        this.client = inClient;
     }
 
     @Override

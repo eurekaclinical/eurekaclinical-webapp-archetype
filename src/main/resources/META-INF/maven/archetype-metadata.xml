@@ -7,6 +7,8 @@
         <requiredProperty key="shortNamespace"/>
         <requiredProperty key="inceptionYear"/>
         <requiredProperty key="serviceArtifactId"/>
+        <requiredProperty key="serviceVersion"/>
+        <requiredProperty key="dataSource"/>
         <requiredProperty key="clientArtifactId"/>
         <requiredProperty key="clientVersion"/>
     </requiredProperties>

@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package}.webapp.props;
 
 
@@ -19,9 +16,8 @@ public class WebappProperties extends CasEurekaClinicalProperties {
         return getValue("${propertyNamespace}.webapp.url");
     }
 
-    public WebappProperties(String projectName) {
-        super("/etc/" + projectName);
-
+    public WebappProperties() {
+        super("/etc/${shortNamespace}");
     }
 
     @Override

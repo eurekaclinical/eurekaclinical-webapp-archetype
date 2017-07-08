@@ -94,8 +94,8 @@
                 <cas-mock-version>1.0</cas-mock-version>
                 <tomcat.httpsPort>8443</tomcat.httpsPort>
                 <tomcat.port>8080</tomcat.port>
-                <service-artifact-id>eurekaclinical-service-template</service-artifact-id>
-                <service-artifact-version>1.0</service-artifact-version>
+                <service-artifact-id>${serviceArtifactId}</service-artifact-id>
+                <service-artifact-version>${serviceVersion}</service-artifact-version>
             </properties>
             <build>
                 <plugins>

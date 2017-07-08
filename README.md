@@ -31,6 +31,8 @@ mvn archetype:generate -DarchetypeGroupId=org.eurekaclinical \
     -DinceptionYear=four-digit-year \
     -Dversion=1.0-SNAPSHOT \
     -DserviceArtifactId=eurekaclinical-microservicename-service \
+    -DserviceVersion=serviceversion \
+    -DdataSource=EurekaClinicalMicroserviceNameService \
     -DclientArtifactId=eurekaclinical-microservicename-client \
     -DclientVersion=clientversion
 ```
@@ -53,6 +55,9 @@ specify here goes into the `inceptionYear` tag in the resulting maven project's 
 `etc/NOTICE.template` file.
 * `serviceArtifactId`: the artifactId of the corresponding service project. Assumes that the service project and this 
 project have the same groupId.
+* `serviceVersion`: the version of the corresponding service project. Assumes that the service project and this 
+project have the same groupId.
+* `dataSource`: the value of the `dataSource` property that was used to create the corresponding service project.
 * `clientArtifactId`: the artifactId of the corresponding client project. Assumes that the client project and this 
 project have the same groupId.
 * `clientVersion`: the version of the corresponding client project. Assumes that the client project and this 

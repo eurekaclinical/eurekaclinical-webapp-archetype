@@ -6,6 +6,7 @@ import com.google.inject.Module;
 import com.google.inject.servlet.GuiceServletContextListener;
 import org.eurekaclinical.common.config.InjectorSupport;
 import ${package}.webapp.props.WebappProperties;
+import ${package}.client.Client;
 
 import javax.servlet.ServletContextEvent;
 import java.util.ResourceBundle;
@@ -17,38 +18,30 @@ import java.util.ResourceBundle;
  */
 public class ContextListener extends GuiceServletContextListener {
 
-    private InjectorSupport injectorSupport;
-    private static final ResourceBundle projectNameProperty = ResourceBundle.getBundle("main");
-    private WebappProperties properties = new WebappProperties();
+    private final WebappProperties properties = new WebappProperties();
+    private Client client = new Client(this.properties.getServiceUrl());
+    private Injector injector;
+
+    @Override
+    protected Injector getInjector() {
+        this.injector = new InjectorSupport(
+                new Module[]{
+                    new AppModule(this.properties, this.client),
+                    new ServletModule(this.properties),},
+                this.properties).getInjector();
+        return this.injector;
+    }
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         super.contextInitialized(servletContextEvent);
-        servletContextEvent.getServletContext().setAttribute(
-                "webAppProperties", this.properties);
+        servletContextEvent.getServletContext().addListener(this.injector.getInstance(ClientSessionListener.class));
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         super.contextDestroyed(servletContextEvent);
-        servletContextEvent.getServletContext().removeAttribute(
-                "webAppProperties");
-    }
-
-    @Override
-    protected Injector getInjector() {
-        /*
-         * Must be created here in order for the modules to initialize
-         * correctly.
-         */
-        if (this.injectorSupport == null) {
-            this.injectorSupport = new InjectorSupport(
-                    new Module[]{
-                        new AppModule(this.properties),
-                        new ServletModule(this.properties),},
-                    this.properties);
-        }
-        return this.injectorSupport.getInjector();
+        this.client.close();
     }
 }
 
