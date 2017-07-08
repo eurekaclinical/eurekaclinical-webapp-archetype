@@ -7,6 +7,8 @@
         <requiredProperty key="shortNamespace"/>
         <requiredProperty key="inceptionYear"/>
         <requiredProperty key="serviceArtifactId"/>
+        <requiredProperty key="clientArtifactId"/>
+        <requiredProperty key="clientVersion"/>
     </requiredProperties>
     <fileSets>
         <fileSet filtered="true" packaged="true" encoding="UTF-8">

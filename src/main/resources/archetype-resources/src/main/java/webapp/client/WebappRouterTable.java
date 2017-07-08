@@ -2,18 +2,19 @@ package ${package}.webapp.client;
 
 import org.eurekaclinical.common.comm.clients.Route;
 import org.eurekaclinical.common.comm.clients.RouterTable;
+import ${package}.client.Client;
 
 import javax.inject.Inject;
 
 /**
  * Created by akalsan on 9/15/16.
  */
-public class ServiceClientRouterTable implements RouterTable {
+public class WebappRouterTable implements RouterTable {
 
-    private final InternalServiceClient client;
+    private final Client client;
 
     @Inject
-    public ServiceClientRouterTable(InternalServiceClient inClient) {
+    public ServiceClientRouterTable(Client inClient) {
         this.client = inClient;
     }
 
