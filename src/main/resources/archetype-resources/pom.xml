@@ -29,7 +29,7 @@
     <properties>
         <jstl-version>1.2</jstl-version>
         <jsp-api-version>2.0</jsp-api-version>
-        <eurekaclinical-common-version>2.0-Alpha-14</eurekaclinical-common-version>
+        <eurekaclinical-common-version>2.0-Alpha-15</eurekaclinical-common-version>
         <client-version>${clientVersion}</client-version>
     </properties>
 
