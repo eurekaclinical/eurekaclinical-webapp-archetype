@@ -1,7 +1,7 @@
 package ${package}.webapp.config;
 
 
-import org.eurekaclinical.common.config.AbstractServletModule;
+import org.eurekaclinical.common.config.AbstractAuthorizingServletModule;
 import org.eurekaclinical.common.servlet.DestroySessionServlet;
 import org.eurekaclinical.common.servlet.PostMessageLoginServlet;
 import org.eurekaclinical.common.servlet.ProxyServlet;
@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * Created by akalsan on 9/15/16.
  */
-public class ServletModule extends AbstractServletModule {
+public class ServletModule extends AbstractAuthorizingServletModule {
 
     private final WebappProperties properties;
 

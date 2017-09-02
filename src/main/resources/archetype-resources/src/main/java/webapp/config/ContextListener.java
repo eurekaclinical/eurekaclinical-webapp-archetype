@@ -46,8 +46,8 @@ public class ContextListener extends GuiceServletContextListener {
     /**
      * In addition to calling the superclass' <code>contextInitialized</code> 
      * method, it creates a session listener for each 
-     * {@link EurekaClinicalClient} REST API client that this webapp accesses
-     * and adds it to the servlet context.
+     * {@link org.eurekaclinical.common.comm.clients.EurekaClinicalClient} REST 
+     * API client that this webapp accesses and adds it to the servlet context.
      * 
      * @param sce the servlet context event
      */
@@ -55,7 +55,7 @@ public class ContextListener extends GuiceServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         super.contextInitialized(sce);
         ServletContext servletContext = sce.getServletContext();
-        servletContext.addListener(new ClientSessionListener(Client.class)));
+        servletContext.addListener(new ClientSessionListener(Client.class));
     }
 
 }
