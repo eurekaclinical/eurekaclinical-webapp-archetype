@@ -85,7 +85,7 @@ begin with an identifier for your deployment, e.g., `emory` instead of
 `eurekaclinical` for services that are specific to a deployment at Emory 
 University. 
 
-2) After confirming that you want to go ahead and create the new service 
+2) After confirming that you want to go ahead and create the new webapp 
 project, maven will create a folder with the new project in the current 
 directory, which in this example would be 
 `eurekaclinical-microservicename-webapp`. It also will create a starter set of
