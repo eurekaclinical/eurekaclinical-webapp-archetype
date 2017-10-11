@@ -274,6 +274,26 @@
                     </plugin>
                 </plugins>
             </build>
+            <!-- We need these dependencies to ensure that they are downloaded from their maven repos before
+            the tomcat plugin overwrites the javax.net.ssl.trustStore system property. Otherwise
+            attempts to download artifacts from repositories will fail with certificate validation
+            errors. -->
+            <dependencies>
+                <dependency>
+                    <groupId>org.eurekaclinical</groupId>
+                    <artifactId>cas-mock</artifactId>
+                    <version>${cas-mock-version}</version>
+                    <type>war</type>
+                    <scope>runtime</scope>
+                </dependency>
+                <dependency>
+                    <groupId>org.eurekaclinical</groupId>
+                    <artifactId>${service-artifact-id}</artifactId>
+                    <version>${service-artifact-version}</version>
+                    <type>war</type>
+                    <scope>runtime</scope>
+                </dependency>
+            </dependencies>
         </profile>
     </profiles>
 </project>
