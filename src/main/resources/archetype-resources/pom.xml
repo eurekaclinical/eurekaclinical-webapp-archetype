@@ -29,7 +29,8 @@
     <properties>
         <jstl-version>1.2</jstl-version>
         <jsp-api-version>2.0</jsp-api-version>
-        <eurekaclinical-common-version>2.0-Alpha-28</eurekaclinical-common-version>
+        <eurekaclinical-common-version>2.0-Alpha-36</eurekaclinical-common-version>
+        <eurekaclinical-standard-apis-version>2.0-Alpha-17</eurekaclinical-standard-apis-version>
         <client-version>${clientVersion}</client-version>
     </properties>
 
@@ -76,6 +77,11 @@
             <groupId>org.eurekaclinical</groupId>
             <artifactId>eurekaclinical-common</artifactId>
             <version>${eurekaclinical-common-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eurekaclinical</groupId>
+            <artifactId>eurekaclinical-standard-apis</artifactId>
+            <version>${eurekaclinical-standard-apis-version}</version>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
