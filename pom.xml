@@ -5,7 +5,7 @@
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-webapp-archetype</artifactId>
     <name>Eureka! Clinical Webapp Archetype</name>
-    <version>1.0-Alpha-11-SNAPSHOT</version>
+    <version>1.0-Alpha-11</version>
     <packaging>maven-archetype</packaging>
   
     <parent>
@@ -61,6 +61,6 @@
         <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</connection>
         <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</developerConnection>
         <url>https://github.com/eurekaclinical/eurekaclinical-webapp-archetype.git</url>
-        <tag>HEAD</tag>
+        <tag>eurekaclinical-webapp-archetype-1.0-Alpha-11</tag>
     </scm>
 </project>
