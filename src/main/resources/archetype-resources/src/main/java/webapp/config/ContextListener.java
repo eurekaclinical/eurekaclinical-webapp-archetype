@@ -55,7 +55,7 @@ public class ContextListener extends GuiceServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         super.contextInitialized(sce);
         ServletContext servletContext = sce.getServletContext();
-        servletContext.addListener(new ClientSessionListener(Client.class));
+        servletContext.addListener(new ClientSessionListener());
     }
 
 }
