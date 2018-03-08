@@ -10,11 +10,11 @@ project will need to have. A sample.jsp and a corresponding
 ViewSampleServlet.java are included for demonstrating the workflow and Jersey 
 client/server communication, and for testing purposes. 
 
-## Version 1.0 development series
+## Version history
 Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype)
 
-## Version history
-No final releases yet
+### Version 1.0
+Initial release.
 
 ## Requirements
 * [Oracle Java JDK 8](http://www.oracle.com/technetwork/java/javase/overview/index.html)

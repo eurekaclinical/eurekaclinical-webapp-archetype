@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.eurekaclinical</groupId>
         <artifactId>eurekaclinical-parent-standard-deps</artifactId>
-        <version>2-Beta-4</version>
+        <version>2</version>
     </parent>
 
     <url>https://github.com/eurekaclinical/${artifactId}.git</url>
@@ -29,8 +29,8 @@
     <properties>
         <jstl-version>1.2</jstl-version>
         <jsp-api-version>2.0</jsp-api-version>
-        <eurekaclinical-common-version>2.0-Alpha-40</eurekaclinical-common-version>
-	<eurekaclinical-standard-apis-version>2.0-Alpha-19</eurekaclinical-standard-apis-version>
+        <eurekaclinical-common-version>2.0</eurekaclinical-common-version>
+	<eurekaclinical-standard-apis-version>2.0</eurekaclinical-standard-apis-version>
         <client-version>${clientVersion}</client-version>
     </properties>
 
@@ -97,7 +97,7 @@
         <profile>
             <id>tomcat</id>
             <properties>
-                <cas-mock-version>1.0</cas-mock-version>
+                <cas-mock-version>2.0</cas-mock-version>
                 <tomcat.httpsPort>8443</tomcat.httpsPort>
                 <tomcat.port>8080</tomcat.port>
                 <service-artifact-id>${serviceArtifactId}</service-artifact-id>
