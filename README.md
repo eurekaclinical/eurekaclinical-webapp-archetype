@@ -10,8 +10,10 @@ project will need to have. A sample.jsp and a corresponding
 ViewSampleServlet.java are included for demonstrating the workflow and Jersey 
 client/server communication, and for testing purposes. 
 
-## Version history
+## Version 2.0 development series
 Latest release: [![Latest release](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.eurekaclinical/eurekaclinical-webapp-archetype)
+
+This version will support creating Eureka! Clinical API gateways using the next major version release of the Eureka! Clinical service framework.
 
 ### Version 1.0
 Initial release.
