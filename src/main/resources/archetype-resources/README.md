@@ -25,10 +25,10 @@ No final releases yet
 You can call all of [${serviceArtifactId}](https://github.com/eurekaclinical/${serviceArtifactId})'s REST APIs through the proxy. Replace `/protected/api` with `/proxy-resource`. The point of doing this is for web clients -- you can deploy the webapp on the same server as web client, and deploy the service on a separate server.
 
 ## Building it
-The project uses the maven build tool. Typically, you build it by invoking `mvn clean install` at the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
+The project uses the maven build tool. Building for the first time is typically done by invoking `mvn clean notice:generate install`. For subsequent builds, `mvn clean install` can be invoked on the command line. For simple file changes, not additions or deletions, you can usually use `mvn install`. See https://github.com/eurekaclinical/dev-wiki/wiki/Building-Eureka!-Clinical-projects for more details.
 
 ## Performing system tests
-You can run this project in an embedded tomcat by executing `mvn tomcat7:run -Ptomcat` after you have built it. It will be accessible in your web browser at https://localhost:8443/${artifactId}/. Your username will be `superuser`.
+You can run this project in an embedded tomcat by executing `mvn  process-resources cargo:run -Ptomcat` after you have built it. It will be accessible in your web browser at https://localhost:8443/${artifactId}/. Your username will be `superuser`.
 
 ## Installation
 ### Configuration

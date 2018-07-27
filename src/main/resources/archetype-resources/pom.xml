@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
     <groupId>${groupId}</groupId>
@@ -9,7 +10,7 @@
     <parent>
         <groupId>org.eurekaclinical</groupId>
         <artifactId>eurekaclinical-parent-standard-deps</artifactId>
-        <version>2</version>
+        <version>3</version>
     </parent>
 
     <url>https://github.com/eurekaclinical/${artifactId}.git</url>
@@ -29,8 +30,8 @@
     <properties>
         <jstl-version>1.2</jstl-version>
         <jsp-api-version>2.0</jsp-api-version>
-        <eurekaclinical-common-version>2.0</eurekaclinical-common-version>
-	<eurekaclinical-standard-apis-version>2.0</eurekaclinical-standard-apis-version>
+        <eurekaclinical-common-version>3.0</eurekaclinical-common-version>
+        <eurekaclinical-standard-apis-version>2.1</eurekaclinical-standard-apis-version>
         <client-version>${clientVersion}</client-version>
     </properties>
 
@@ -68,6 +69,27 @@
                         <exclude>**/*.css</exclude>
                         <exclude>**/*.json</exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <configuration>
+                    <deployables>
+                        <deployable>
+                            <location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location>
+                        </deployable>
+                        <deployable>
+                            <groupId>org.eurekaclinical</groupId>
+                            <artifactId>cas-mock</artifactId>
+                            <type>war</type>
+                        </deployable>
+                        <deployable>
+                            <groupId>org.eurekaclinical</groupId>
+                            <artifactId>${service-artifact-id}</artifactId>
+                            <type>war</type>
+                        </deployable>
+                    </deployables>
                 </configuration>
             </plugin>
         </plugins>
@@ -280,10 +302,10 @@
                     </plugin>
                 </plugins>
             </build>
-            <!-- We need these dependencies to ensure that they are downloaded from their maven repos before
-            the tomcat plugin overwrites the javax.net.ssl.trustStore system property. Otherwise
-            attempts to download artifacts from repositories will fail with certificate validation
-            errors. -->
+            <!-- We need these dependencies to ensure that they are downloaded from 
+                their maven repos before the tomcat plugin overwrites the javax.net.ssl.trustStore 
+                system property. Otherwise attempts to download artifacts from repositories 
+                will fail with certificate validation errors. -->
             <dependencies>
                 <dependency>
                     <groupId>org.eurekaclinical</groupId>
